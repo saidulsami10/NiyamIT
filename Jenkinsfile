@@ -1,9 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Checkout & Build') {
             steps {
-                echo 'Hello, Jenkins pipeline is working!'
+                echo 'Building your application code...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running automated tests...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying application to environment...'
             }
         }
     }
